@@ -1,0 +1,109 @@
+{% extends "info_manage/base.html" %}
+{% block header %}
+    <div class="jumbotron">
+        <h2>学生信息管理系统</h2>
+    </div>
+{% endblock header %}
+{% block content %}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>导航菜单</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <h2>导航菜单</h2>
+    <body>
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion"
+                       href="#collapseOne">
+                        个人信息
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <a href="{% url 'info_manage:stu_information' %}">1、个人基本信息</a><br>
+                    <a href="#">2、个人成绩查询</a><br>
+                    <a href="#">3、个人获奖记录</a><br>
+                    <a href="#">4、处分查询</a><br>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion"
+                       href="#collapseTwo">
+                        学籍管理
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <a href="{% url 'info_manage:school_register' %}">1、个人学籍信息</a><br>
+                    <a href="#">2、学信网学籍查询</a><br>
+                    <a href="#">3、查看家庭成员</a><br>
+                    <a href="#">4、学籍变动</a><br>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion"
+                       href="#collapseThree">
+                        考试管理
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <a href="{% url 'info_manage:exam_information' %}">1、考试信息</a><br>
+                    <a href="#">2、考试排名</a><br>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion"
+                       href="#collapsefour">
+                        财务管理
+                    </a>
+                </h4>
+            </div>
+            <div id="collapsefour" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <a href="{% url 'info_manage:tuition' %}">1、学费查询</a><br>
+                    <a href="#">2、IC卡充值</a><br>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion"
+                       href="#collapsefive">
+                        通知管理
+                    </a>
+                </h4>
+            </div>
+            <div id="collapsefive" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <a href="#">1、通讯录</a><br>
+                    <a href="#">2、收件箱</a><br>
+                    <a href="#">3、发件箱</a><br>
+                    <a href="#">4、草稿箱</a><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
+{% endblock content %}

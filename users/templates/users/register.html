@@ -1,0 +1,9 @@
+{% extends "info_manage/base.html" %}
+{% block content %}
+  <form method="post" action="{% url 'users:register' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button name="submit">注册</button>
+      <input type="hidden" name="next" value="{% url 'info_manage:index' %}" />
+  </form>
+{% endblock content %}

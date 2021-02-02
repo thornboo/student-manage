@@ -1,0 +1,37 @@
+{% extends "info_manage/base.html" %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>修改学生个人信息</title>
+    </head>
+    <body>
+    <h3>修改学生个人信息</h3>
+    <form name="stu_information" method="get">
+        学号<input type="text"><br><br>
+        姓名<input type="text" maxlength="10"><br><br>
+        性别：<input type="radio"> 男<input type="radio"> 女<br><br>
+        出生日期<input type="text" maxlength="11"><br><br>
+        身份证号<input type="text" maxlength="18"><br><br>
+        籍贯<input type="text"><br><br>
+        入学时间<input type="text"><br><br>
+        家庭住址<input type="text"><br><br>
+        院系<select name="department">
+        <option>-------</option>
+        <option>信息工程</option>
+        <option>航空航天</option>
+        <option>交通运输</option>
+        <option>商学院</option>
+        <option>机械工程</option>
+        <option>电气工程</option>
+        <option>艺术学院</option>
+    </select><br><br>
+        班级<input type="text"><br><br>
+    </form>
+    <input type="submit">
+    <p>{{ rlt }}</p>
+    </body>
+    </html>
+{% endblock content %}

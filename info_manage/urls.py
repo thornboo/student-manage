@@ -11,15 +11,43 @@ urlpatterns = [
     path('bulletin/', views.bulletin, name='bulletin'),
     # 系统帮助
     path('help/', views.help, name='help'),
-    # 学生个人信息
+    # 系统设置选项
+    path('settings/', views.sys_settings, name="settings"),
+
+    # 个人信息栏
+    # 1、学生个人信息
     path('stu_information/', views.stu_information, name='stu_information'),
-    # 学籍管理
-    path('school_register/', views.school_register, name="school_register"),
-    # 考试管理
+    # 2、个人成绩查询
+    path('score/', views.score, name="score"),
+    # 3、个人获奖记录
+    path('award/', views.award, name="award"),
+    # 4、处分记录
+    path('punish/', views.punish, name="punish"),
+
+    # 学籍管理栏
+    # 1、个人学籍查询
+    path('school_register/', views.school_roll, name="school_register"),
+    # 2、学信网查询学籍
+    # 3、查看家庭成员
+    path('member/', views.fam_member, name="memebr"),
+    # 4、学籍变动信息
+    path('roll_change/', views.school_roll_change, name="roll_change"),
+
+    # 考试管理栏
     path('exam_information/', views.exam_information, name="exam_information"),
-    # 财务管理
+    # 1、考试信息
+    path('exam_info/', views.exam_information, name="exam_info"),
+    # 2、考试排名
+    path('score_inquire/', views.score_inquire, name="score_inquire"),
+
+    # 财务管理栏
     path('tuition/', views.tuition, name="tuition"),
-    # 通知管理
-    # 获奖管理
-    # 处分管理
+    # 1、学费查询
+    # 2、IC卡充值查询
+
+    # 通知管理栏
+    # 1、通讯录
+    # 2、收件箱
+    # 3、发件箱
+    # 4、草稿箱
 ]

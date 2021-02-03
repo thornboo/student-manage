@@ -23,6 +23,8 @@ urlpatterns = [
     path('award/', views.award, name="award"),
     # 4、处分记录
     path('punish/', views.punish, name="punish"),
+    # 修改个人信息
+    path('modify/', views.modify_dtu_info, name="modify_dtu_info"),
 
     # 学籍管理栏
     # 1、个人学籍查询
@@ -41,9 +43,10 @@ urlpatterns = [
     path('score_inquire/', views.score_inquire, name="score_inquire"),
 
     # 财务管理栏
-    path('tuition/', views.tuition, name="tuition"),
     # 1、学费查询
+    path('tuition/', views.tuition, name="tuition"),
     # 2、IC卡充值查询
+    path('recharge/', views.card_recharge, name="recharge"),
 
     # 通知管理栏
     # 1、通讯录

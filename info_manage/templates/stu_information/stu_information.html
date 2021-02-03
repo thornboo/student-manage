@@ -12,12 +12,47 @@
     <table border="1">
         <tr>
             <td>学号</td>
+            <td>-----</td>
+            <td rowspan="4">照片</td>
+        </tr>
+        <tr>
             <td>姓名</td>
+            <td>-----</td>
+        </tr>
+        <tr>
             <td>性别</td>
-            <td></td>
-            <td></td>
+            <td>-----</td>
+        </tr>
+        <tr>
+            <td>出生日期</td>
+            <td>-----</td>
+        </tr>
+        <tr>
+            <td>身份证号</td>
+            <td colspan="2">---------------------------------------------</td>
+        </tr>
+        <tr>
+            <td>籍贯</td>
+            <td colspan="2">-----</td>
+        </tr>
+        <tr>
+            <td>入学时间</td>
+            <td colspan="2">--------------------</td>
+        </tr>
+        <tr>
+            <td>家庭住址</td>
+            <td colspan="2">-----</td>
+        </tr>
+        <tr>
+            <td>院系</td>
+            <td colspan="2">----------</td>
+        </tr>
+        <tr>
+            <td>班级</td>
+            <td colspan="2">----------</td>
         </tr>
     </table>
+    <a href="{% url 'info_manage:modify_dtu_info' %}">修改信息</a>
     <p>{{ rlt }}</p>
     </body>
     </html>

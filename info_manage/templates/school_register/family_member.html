@@ -1,1 +1,36 @@
 {% extends "info_manage/base.html" %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>家庭成员</title>
+    </head>
+    <body>
+    <h4>家庭成员信息</h4>
+    <div>
+        <table border="1">
+            <tr>
+                <td>姓名</td>
+                <td>-----------------------</td>
+                <td>年龄</td>
+                <td>--------------------</td>
+            </tr>
+            <tr>
+                <td>与本人关系</td>
+                <td>--------------</td>
+                <td>工作单位</td>
+                <td>----------------</td>
+            </tr>
+            <tr>
+                <td>备注</td>
+                <td colspan="3">------------</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <a href="#"><br>修改信息</a>
+    </div>
+    </body>
+    </html>
+{% endblock content %}

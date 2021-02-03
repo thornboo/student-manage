@@ -1,11 +1,24 @@
 {% extends "info_manage/base.html" %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>IC卡充值</title>
+    </head>
+    <body>
+    <div>
+        <p>余额：</p>
+    </div>
+    <div>
+        <form name="IC_recharge" method="get">
+            请充值:<input type="text"><br><br>
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <br><a href="#">充值记录</a>
+    </div>
+    </body>
+    </html>
+{% endblock content %}

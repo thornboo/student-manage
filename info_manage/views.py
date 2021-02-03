@@ -92,3 +92,9 @@ def tuition(request):
 def card_recharge(request):
     """IC卡充值"""
     return render(request, "financial/card_recharge.html")
+
+
+@login_required
+def modify_dtu_info(request):
+    """修改个人信息页面"""
+    return render(request, "stu_information/modify_stu_info.html")

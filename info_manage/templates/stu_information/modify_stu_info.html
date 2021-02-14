@@ -6,31 +6,72 @@
     <head>
         <meta charset="utf-8">
         <title>修改学生个人信息</title>
+        <style>
+            h3 {
+                text-align: center;
+            }
+
+            body {
+                text-align: center;
+            }
+
+            .size {
+                width: 250px;
+                height: 30px;
+            }
+
+            .style {
+                background-color: #efefef;
+            }
+        </style>
+{#        <script>#}
+{#            window.onload = function () {#}
+{#                var btn = document.getElementById("btn");#}
+{#                btn.onclick = function () {#}
+{#                    var xhr = new XMLHttpRequest();#}
+{##}
+{#                    xhr.open("post", "http://127.0.0.1:8000/", true);#}
+{#                    xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");#}
+{#                    xhr.send("哈哈哈");#}
+{##}
+{#                    xhr.onreadystatechange = function () {#}
+{#                        if (xhr.readyState === 4) {#}
+{#                            alert("success")#}
+{#                        }#}
+{#                    }#}
+{#                }#}
+{#            }#}
+{#        </script>#}
+
     </head>
-    <body>
+
     <h3>修改学生个人信息</h3>
-    <form name="stu_information" method="get">
-        学号<input type="text"><br><br>
-        姓名<input type="text" maxlength="10"><br><br>
-        性别：<input type="radio"> 男<input type="radio"> 女<br><br>
-        出生日期<input type="text" maxlength="11"><br><br>
-        身份证号<input type="text" maxlength="18"><br><br>
-        籍贯<input type="text"><br><br>
-        入学时间<input type="text"><br><br>
-        家庭住址<input type="text"><br><br>
-        院系<select name="department">
-        <option>-------</option>
-        <option>信息工程</option>
-        <option>航空航天</option>
-        <option>交通运输</option>
-        <option>商学院</option>
-        <option>机械工程</option>
-        <option>电气工程</option>
-        <option>艺术学院</option>
-    </select><br><br>
-        班级<input type="text"><br><br>
-    </form>
-    <input type="submit">
+    <div class="style">
+        <form  method="POST">
+{#            {% csrf_token %}#}
+            <br/>
+            学号<input name="stu_id" type="text" class="size"><br><br>
+            姓名<input name="stu_name" type="text" maxlength="10" class="size"><br><br>
+            性别：<input name="stu_sex"  type="radio" name="sex">男 <input type="radio" name="sex">女 <br><br>
+            出生日期<input name="birth_date" type="text" class="size"><br><br>
+            身份证号<input name="identity_number" type="text" maxlength="18" class="size"><br><br>
+            籍贯<input name="native_place" type="text" class="size"><br><br>
+            入学时间<input name="admission_time" type="text" class="size"><br><br>
+            家庭住址<input name="home_address" type="text" class="size"><br><br>
+            院系<select name="department_name" class="size">
+            <option>请选择...</option>
+            <option>信息工程</option>
+            <option>航空航天</option>
+            <option>交通运输</option>
+            <option>商学院</option>
+            <option>机械工程</option>
+            <option>电气工程</option>
+            <option>艺术学院</option>
+        </select><br><br>
+            班级<input name="class_name" type="text" class="size"><br><br>
+            <button id="btn" type="submit">提交</button>
+        </form>
+    </div>
     <p>{{ rlt }}</p>
     </body>
     </html>

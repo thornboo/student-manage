@@ -1,6 +1,6 @@
 {% extends "info_manage/base.html" %}
 {% block header %}
-    <h4>学费管理</h4>
+    <h3>学费管理</h3><br/>
 {% endblock header %}
 {% block content %}
     <!DOCTYPE html>
@@ -8,22 +8,49 @@
     <head>
         <meta charset="UTF-8">
         <title>学费管理</title>
+        <style>
+            h3 {
+                text-align: center;
+            }
+
+            table {
+                width: 100%;
+                text-align: center;
+            }
+
+            table tr {
+                height: 40px;
+            }
+        </style>
     </head>
+
     <body>
     <div>
         <table border="1">
-                <tr>
-                    <td>学期</td>
-                    <td>是否已缴费</td>
-                    <td>支付方式</td>
-                    <td>费用</td>
-                </tr>
-                <tr>
-                    <td>----------</td>
-                    <td>----------</td>
-                    <td>----------</td>
-                    <td>----------</td>
-                </tr>
+            <tr>
+                <td>学期</td>
+                <td>是否已缴费</td>
+                <td>支付方式</td>
+                <td>费用</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
         </table>
     </div>
     </body>

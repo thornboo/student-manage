@@ -1,11 +1,27 @@
 {% extends "info_manage/base.html" %}
 {% block header %}
     <div>
-        <h4>我的处分记录</h4>
+        <h3>我的处分记录</h3>
     </div>
 {% endblock header %}
 {% block content %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <title>处分记录</title>
+        <style>
+            div h3 {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
     <div>
-        无处分记录。
+        <ul>
+            <li>无处分记录。</li>
+        </ul>
     </div>
+    </body>
+    </html>
 {% endblock content %}

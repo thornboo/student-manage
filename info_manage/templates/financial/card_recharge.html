@@ -5,19 +5,48 @@
     <head>
         <meta charset="UTF-8">
         <title>IC卡充值</title>
+        <style>
+            h3 {
+                text-align: center;
+            }
+
+            table {
+                text-align: center;
+                width: 100%;
+            }
+
+            table tr td {
+                height: 40px;
+            }
+
+            input {
+                width: 100%;
+                height: 40px;
+            }
+        </style>
     </head>
+
     <body>
+    <h3>IC卡充值</h3><br/>
     <div>
-        <p>余额：</p>
+        <table border="1">
+            <tr>
+                <td style="width: 120px">余额</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>请输入充值金额</td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+        </table>
     </div>
+    <h4>充值记录</h4>
     <div>
-        <form name="IC_recharge" method="get">
-            请充值:<input type="text"><br><br>
-            <input type="submit">
-        </form>
-    </div>
-    <div>
-        <br><a href="#">充值记录</a>
+        <ul>
+            <li>充值记录</li>
+        </ul>
     </div>
     </body>
     </html>

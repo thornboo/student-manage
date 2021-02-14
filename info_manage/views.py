@@ -95,6 +95,33 @@ def card_recharge(request):
 
 
 @login_required
-def modify_dtu_info(request):
+def modify_stu_info(request):
     """修改个人信息页面"""
+    # 从前端获取数据
+    #     stu_id = request.POST.get("stu_id")
+    #     stu_name = request.POST.get("stu_name")
+    #     stu_sex = request.POST.get("stu_sex")
+    #     birth_date = request.POST.get("birth_date")
+    #     identity_number = request.POST.get("identity_number")
+    #     native_place = request.POST.get("native_place")
+    #     admission_time = request.POST.get("admission_time")
+    #     home_address = request.POST.get("home_address")
+    #     department_name = request.POST.get("department_name")
+    #     class_name = request.POST.get("class_name")
+    #     # 写入数据库
+    #     stu = Student()  # 初始化数据库
+    #     stu.id = stu_id
+    #     stu.name = stu_name
+    #     stu.sex = stu_sex
+    #     stu.birth = birth_date
+    #     stu.identity = identity_number
+    #     stu.native = native_place
+    #     stu.admission = admission_time
+    #     stu.address = home_address
+    #     stu.department = department_name
+    #     stu.sch_class = class_name
+    #     stu.save()
+    #     result = "success"
+    # return render(request, "stu_information/modify_stu_info.html")
+    print(request.POST)
     return render(request, "stu_information/modify_stu_info.html")

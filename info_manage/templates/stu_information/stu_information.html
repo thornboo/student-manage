@@ -6,53 +6,75 @@
     <head>
         <meta charset="utf-8">
         <title>学生个人信息</title>
+        <style>
+            h3 {
+                text-align: center;
+            }
+            table {
+                width: 100%;
+                height: 500px;
+            }
+            div {
+                text-align: center;
+            }
+            .left_info {
+                width: 150px;
+            }
+            .center_info {
+                width: 800px;
+            }
+        </style>
     </head>
+
     <body>
-    <h3>学生个人信息</h3>
-    <table border="1">
-        <tr>
-            <td>学号</td>
-            <td>-----</td>
-            <td rowspan="4">照片</td>
-        </tr>
-        <tr>
-            <td>姓名</td>
-            <td>-----</td>
-        </tr>
-        <tr>
-            <td>性别</td>
-            <td>-----</td>
-        </tr>
-        <tr>
-            <td>出生日期</td>
-            <td>-----</td>
-        </tr>
-        <tr>
-            <td>身份证号</td>
-            <td colspan="2">---------------------------------------------</td>
-        </tr>
-        <tr>
-            <td>籍贯</td>
-            <td colspan="2">-----</td>
-        </tr>
-        <tr>
-            <td>入学时间</td>
-            <td colspan="2">--------------------</td>
-        </tr>
-        <tr>
-            <td>家庭住址</td>
-            <td colspan="2">-----</td>
-        </tr>
-        <tr>
-            <td>院系</td>
-            <td colspan="2">----------</td>
-        </tr>
-        <tr>
-            <td>班级</td>
-            <td colspan="2">----------</td>
-        </tr>
-    </table>
-    <a href="{% url 'info_manage:modify_dtu_info' %}">修改信息</a>
+    <h3>学生个人信息</h3><br/>
+    <div>
+        <table border="1">
+            <tr>
+                <td class="left_info">学号</td>
+                <td class="center_info"></td>
+                <td rowspan="4">照片</td>
+            </tr>
+            <tr>
+                <td>姓名</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>出生日期</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>身份证号</td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>籍贯</td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>入学时间</td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>家庭住址</td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>院系</td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>班级</td>
+                <td colspan="2"></td>
+            </tr>
+        </table>
+        <br>
+    </div>
+    <a href="{% url 'info_manage:modify_stu_info' %}">修改信息</a>
     <p>{{ rlt }}</p>
     </body>
     </html>

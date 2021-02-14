@@ -24,7 +24,7 @@ urlpatterns = [
     # 4、处分记录
     path('punish/', views.punish, name="punish"),
     # 修改个人信息
-    path('modify/', views.modify_dtu_info, name="modify_dtu_info"),
+    path('modify/', views.modify_stu_info, name="modify_stu_info"),
 
     # 学籍管理栏
     # 1、个人学籍查询

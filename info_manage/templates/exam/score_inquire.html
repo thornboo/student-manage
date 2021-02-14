@@ -11,14 +11,65 @@
     <head>
         <meta charset="utf-8">
         <title>学生个人信息</title>
+        <style>
+            div h3,table {
+                text-align: center;
+            }
+            table {
+                width: 100%;
+            }
+            table tr {
+                height: 30px;
+            }
+            h4,h6 {
+                display: inline-block;
+            }
+            .chage_exam {
+                display: inline-block;
+                width: 200px;
+                float: right;
+            }
+        </style>
     </head>
+
     <body>
+    <h4>此处展示考试名称</h4>
+    <h6>此处展示考试时间</h6>
+    <div class="chage_exam">
+        <select style="width: 200px; height: 30px">
+            <option>请选择考试...</option>
+            <option>开学摸底考试</option>
+            <option>期中考试</option>
+            <option>期末考试</option>
+        </select>
+    </div>
     <div>
-        <ol>
-            <li>张华</li>
-            <li>李明</li>
-            <li>李华</li>
-        </ol>
+        <table border="1">
+            <tr>
+                <td>排名</td>
+                <td>姓名</td>
+                <td>班级</td>
+                <td>总分</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
     </div>
     </body>
     </html>

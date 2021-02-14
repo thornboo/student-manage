@@ -1,7 +1,7 @@
 {% extends "info_manage/base.html" %}
 {% block header %}
     <div class="jumbotron">
-        <h2>学生信息管理系统</h2>
+        <h2>学生信息管理系统(学生版)</h2>
     </div>
 {% endblock header %}
 {% block content %}
@@ -28,9 +28,9 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    <a href="{% url 'info_manage:stu_information' %}">1、个人基本信息</a><br>
-                    <a href="{% url 'info_manage:score' %}">2、个人成绩查询</a><br>
-                    <a href="{% url 'info_manage:award' %}">3、个人获奖记录</a><br>
+                    <a href="{% url 'info_manage:stu_information' %}">1、基本信息</a><br>
+                    <a href="{% url 'info_manage:score' %}">2、成绩查询</a><br>
+                    <a href="{% url 'info_manage:award' %}">3、获奖记录</a><br>
                     <a href="{% url 'info_manage:punish' %}">4、处分查询</a><br>
                 </div>
             </div>
@@ -46,7 +46,7 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <a href="{% url 'info_manage:school_register' %}">1、个人学籍信息</a><br>
+                    <a href="{% url 'info_manage:school_register' %}">1、学籍信息</a><br>
                     <a href="https://www.chsi.com.cn/" target="_blank">2、学信网学籍查询</a><br>
                     <a href="{% url 'info_manage:memebr' %}">3、查看家庭成员</a><br>
                     <a href="{% url 'info_manage:roll_change' %}">4、学籍变动</a><br>

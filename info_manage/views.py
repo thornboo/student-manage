@@ -97,31 +97,23 @@ def card_recharge(request):
 @login_required
 def modify_stu_info(request):
     """修改个人信息页面"""
-    # 从前端获取数据
-    #     stu_id = request.POST.get("stu_id")
-    #     stu_name = request.POST.get("stu_name")
-    #     stu_sex = request.POST.get("stu_sex")
-    #     birth_date = request.POST.get("birth_date")
-    #     identity_number = request.POST.get("identity_number")
-    #     native_place = request.POST.get("native_place")
-    #     admission_time = request.POST.get("admission_time")
-    #     home_address = request.POST.get("home_address")
-    #     department_name = request.POST.get("department_name")
-    #     class_name = request.POST.get("class_name")
-    #     # 写入数据库
-    #     stu = Student()  # 初始化数据库
-    #     stu.id = stu_id
-    #     stu.name = stu_name
-    #     stu.sex = stu_sex
-    #     stu.birth = birth_date
-    #     stu.identity = identity_number
-    #     stu.native = native_place
-    #     stu.admission = admission_time
-    #     stu.address = home_address
-    #     stu.department = department_name
-    #     stu.sch_class = class_name
-    #     stu.save()
-    #     result = "success"
-    # return render(request, "stu_information/modify_stu_info.html")
-    print(request.POST)
+    from info_manage import models
+    if request.method == 'POST':
+        stu_id = request.POST['stu_id']
+        stu_name = request.POST['stu_name']
+        stu_sex = request.POST['stu_sex']
+        birth_date = request.POST['birth_date']
+        identity_number = request.POST['identity_number']
+        native_place = request.POST['native_place']
+        admission_time = request.POST['admission_time']
+        home_address = request.POST['home_address']
+        department_name = request.POST['department_name']
+        department_object = models.Department.objects.create(department_name=department_name)
+        class_name = request.POST['class_name']
+        class_object = models.Class.objects.create(class_name=class_name)
+        models.Student.objects.create(stu_id=stu_id, stu_name=stu_name, stu_sex=stu_sex, birth_date=birth_date,
+                                      identity_number=identity_number, native_place=native_place,
+                                      admission_time=admission_time, home_address=home_address,
+                                      department_name=department_object, class_name=class_object)
+
     return render(request, "stu_information/modify_stu_info.html")

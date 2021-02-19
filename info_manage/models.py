@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Department(models.Model):
     """学校院系信息"""
-    department_id = models.CharField(max_length=5, verbose_name="学院编号", primary_key=True)
+    department_id = models.AutoField(primary_key=True)
     department_name = models.CharField(max_length=10, verbose_name="全称")
 
     class Meta:
@@ -18,7 +18,7 @@ class Department(models.Model):
 
 class Class(models.Model):
     """学校班级信息"""
-    class_id = models.CharField(max_length=5, verbose_name="班级编号", primary_key=True)
+    class_id = models.AutoField(primary_key=True)
     class_name = models.CharField(max_length=10, verbose_name="全称")
 
     class Meta:
@@ -33,10 +33,10 @@ class Student(models.Model):
     stu_name = models.CharField(max_length=10, verbose_name="姓名")
     sex_choice = (('M', '男'), ('W', '女'))
     stu_sex = models.CharField(max_length=4, choices=sex_choice, verbose_name="性别")
-    birth_date = models.DateField(verbose_name="出生日期")
+    birth_date = models.CharField(verbose_name='出生日期', max_length=10)
     identity_number = models.CharField(max_length=18, verbose_name='身份证号')
     native_place = models.CharField(max_length=50, verbose_name="籍贯")
-    admission_time = models.DateField(verbose_name='入学时间')
+    admission_time = models.CharField(verbose_name='入学时间', max_length=10)
     home_address = models.CharField(max_length=50, verbose_name='家庭住址')
     department_name = models.ForeignKey(Department, verbose_name="院系", on_delete=models.CASCADE)
     class_name = models.ForeignKey(Class, verbose_name="班级", on_delete=models.CASCADE)

@@ -26,6 +26,9 @@ class Class(models.Model):
         verbose_name = "班级"
         verbose_name_plural = "班级信息"
 
+    def __str__(self):
+        return self.class_name
+
 
 class Student(models.Model):
     """学生个人信息"""

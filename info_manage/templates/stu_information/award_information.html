@@ -2,6 +2,9 @@
 {% block header %}
     <div>
         <h3>我的获奖记录</h3><br/>
+        <span>
+        <button><a href={% url 'info_manage:add_award_info' %}>上传获奖信息</a></button>
+    </span>
     </div>
 {% endblock header %}
 {% block content %}
@@ -12,6 +15,10 @@
         <style>
             div h3 {
                 text-align: center;
+            }
+
+            span {
+                font-size: 16px;
             }
         </style>
     </head>

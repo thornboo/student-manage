@@ -10,16 +10,20 @@
             h3 {
                 text-align: center;
             }
+
             table {
                 width: 100%;
                 height: 500px;
             }
+
             div {
                 text-align: center;
             }
+
             .left_info {
                 width: 150px;
             }
+
             .center_info {
                 width: 800px;
             }
@@ -32,49 +36,57 @@
         <table border="1">
             <tr>
                 <td class="left_info">学号</td>
-                <td class="center_info"></td>
+                <td class="center_info">{{ stu_id }}</td>
                 <td rowspan="4">照片</td>
             </tr>
             <tr>
                 <td>姓名</td>
-                <td></td>
+                <td>{{ stu_name }}</td>
             </tr>
             <tr>
                 <td>性别</td>
-                <td></td>
+                <td>{{ stu_sex }}</td>
             </tr>
             <tr>
                 <td>出生日期</td>
-                <td></td>
+                <td>{{ birth_date }}</td>
             </tr>
             <tr>
                 <td>身份证号</td>
-                <td colspan="2"></td>
+                <td>{{ identity_number }}</td>
+                <td></td>
             </tr>
             <tr>
                 <td>籍贯</td>
-                <td colspan="2"></td>
+                <td>{{ native_place }}</td>
+                <td></td>
             </tr>
             <tr>
                 <td>入学时间</td>
-                <td colspan="2"></td>
+                <td>{{ admission_time }}</td>
+                <td></td>
             </tr>
             <tr>
                 <td>家庭住址</td>
-                <td colspan="2"></td>
+                <td>{{ home_address }}</td>
+                <td></td>
             </tr>
             <tr>
                 <td>院系</td>
-                <td colspan="2"></td>
+                <td>{{ department_name }}</td>
+                <td></td>
             </tr>
             <tr>
                 <td>班级</td>
-                <td colspan="2"></td>
+                <td>{{ class_name }}</td>
+                <td></td>
             </tr>
         </table>
         <br>
     </div>
-    <a href="{% url 'info_manage:modify_stu_info' %}">修改信息</a>
+    <div>
+        <button><a href="{% url 'info_manage:modify_stu_info' %}">修改信息</a></button>
+    </div>
     <p>{{ rlt }}</p>
     </body>
     </html>

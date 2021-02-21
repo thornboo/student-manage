@@ -1,0 +1,59 @@
+{% extends "info_manage/base.html" %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>增加获奖信息</title>
+        <style>
+            h3 {
+                text-align: center;
+            }
+
+            input,select {
+                width: 250px;
+                height: 30px;
+            }
+
+            .upload {
+                font-size: 16px;
+            }
+        </style>
+        <script>
+        function btn() {
+            alert("提交成功！");
+        }
+        </script>
+    </head>
+    <body>
+    <div>
+        <h3>增加获奖信息</h3><br><br>
+    </div>
+    <div>
+        奖项名称:<input type="text"><br><br>
+        获奖时间:<input type="date"><br><br>
+        奖项等级:<select>
+        <option>请选择...</option>
+        <option>一等奖</option>
+        <option>二等奖</option>
+        <option>三等奖</option>
+        <option>优秀奖</option>
+    </select><br><br>
+        获奖级别:<select>
+        <option>请选择...</option>
+        <option>国家级</option>
+        <option>省级</option>
+        <option>市级</option>
+        <option>区级</option>
+        <option>校级</option>
+    </select><br><br>
+        <span>备注信息:<br></span>
+        <textarea rows="3px" cols="100px" id="remark" placeholder="请填写..."></textarea><br><br>
+    </div>
+    <div>
+        <span><button><a href="#" class="upload" onclick="btn()">上传证书</a></button></span>
+        <br><br><span><button onclick="btn()">提交信息</button></span>
+    </div>
+    </body>
+    </html>
+{% endblock content %}

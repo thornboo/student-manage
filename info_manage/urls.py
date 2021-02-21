@@ -25,6 +25,8 @@ urlpatterns = [
     path('punish/', views.punish, name="punish"),
     # 修改个人信息
     path('modify/', views.modify_stu_info, name="modify_stu_info"),
+    # 增加获奖记录
+    path('add_award_info/', views.add_award_info, name="add_award_info"),
 
     # 学籍管理栏
     # 1、个人学籍查询

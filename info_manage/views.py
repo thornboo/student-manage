@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.http import Http404, HttpResponse
 from .models import Student
+from info_manage import models
 
 
 @login_required
@@ -31,7 +32,15 @@ def sys_settings(request):
 @login_required
 def stu_information(request):
     """学生个人信息"""
-    return render(request, "stu_information/stu_information.html")
+    student = None
+    for stu in Student.objects.all():
+        student = stu
+    return render(request, "stu_information/stu_information.html",
+                  {"stu_name": student.stu_name, "stu_id": student.stu_id, "stu_sex": student.stu_sex,
+                   "birth_date": student.birth_date, "identity_number": student.identity_number,
+                   "native_place": student.native_place, "admission_time": student.admission_time,
+                   "home_address": student.home_address, "department_name": student.department_name,
+                   "class_name": student.class_name})
 
 
 @login_required
@@ -44,6 +53,12 @@ def score(request):
 def award(request):
     """学生获奖记录"""
     return render(request, "stu_information/award_information.html")
+
+
+@login_required
+def add_award_info(request):
+    """增加获奖记录"""
+    return render(request, "stu_information/add_award_info.html")
 
 
 @login_required
@@ -97,7 +112,6 @@ def card_recharge(request):
 @login_required
 def modify_stu_info(request):
     """修改个人信息页面"""
-    from info_manage import models
     if request.method == 'POST':
         stu_id = request.POST['stu_id']
         stu_name = request.POST['stu_name']

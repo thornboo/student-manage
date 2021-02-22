@@ -1,11 +1,31 @@
 {% extends "info_manage/base.html" %}
 {% block header %}
-    <style>
-        h2 {
-            color: #ff0000;
-        }
-    </style>
-    <h2>校园公告</h2>
+    <h3>校园公告</h3>
 {% endblock header %}
 {% block content %}
+    <!doctype html>
+    <html lang="zh">
+    <head>
+        <title>校园公告</title>
+        <style>
+            h3 {
+                text-align: center;
+            }
+
+            .head {
+                font-size: 16px;
+                line-height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="head">
+        <ul>
+            <li><a href="#">公告标题</a></li>
+            <li><a href="#">公告标题</a></li>
+            <li><a href="#">公告标题</a></li>
+        </ul>
+    </div>
+    </body>
+    </html>
 {% endblock content %}

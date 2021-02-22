@@ -131,3 +131,27 @@ def modify_stu_info(request):
                                       department_name=department_object, class_name=class_object)
 
     return render(request, "stu_information/modify_stu_info.html")
+
+
+@login_required
+def address_book(request):
+    """站内通讯录"""
+    return render(request, "notification/address_book.html")
+
+
+@login_required
+def outbox(request):
+    """站内写邮件"""
+    return render(request, "notification/outbox.html")
+
+
+@login_required
+def inbox(request):
+    """收件箱"""
+    return render(request, "notification/inbox.html")
+
+
+@login_required
+def draft_box(request):
+    """草稿箱"""
+    return render(request, "notification/draft_box.html")

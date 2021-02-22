@@ -1,0 +1,48 @@
+{% extends "info_manage/base.html" %}
+{% block header %}
+    <h3>通讯录</h3>
+{% endblock header %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>通讯录</title>
+        <style>
+            body {
+                text-align: center;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            table tr {
+                height: 40px;
+            }
+
+            table, table tr td {
+                border: 1px solid #050505;
+            }
+        </style>
+    </head>
+    <body>
+    <div>
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td>电话</td>
+                <td>邮箱号</td>
+                <td>职位</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    </body>
+    </html>
+{% endblock content %}

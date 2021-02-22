@@ -1,19 +1,96 @@
 {% extends "info_manage/base.html" %}
 {% block header %}
+    <h3>设置</h3>
 {% endblock header %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>系统的设置</title>
-</head>
-<body>
-    <p> 规划：<br>
-        1、设置一个可以调节黑暗模式和白色模式<br>
-        2、可以修改密码和用户名<br>
-        3、可以选择永久删除此用户<br>
-    </p>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>系统设置</title>
+        <style>
+            h3 {
+                text-align: center;
+            }
+
+            .switch-btn {
+                width: 45px;
+                height: 25px;
+                position: relative;
+                top: 1px;
+            }
+
+            .hidden-checkbox,
+            .switch-area,
+            .switch-toggle {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .hidden-checkbox {
+                width: 45px;
+                height: 25px;
+                opacity: 0;
+                z-index: 10;
+                cursor: pointer;
+            }
+
+            .switch-area {
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                background-color: #4ab838;
+            }
+
+            .switch-toggle {
+                width: 25px;
+                height: 25px;
+                border: 1px solid #e0ae19;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+
+            .hidden-checkbox:checked ~ .switch-area {
+                background-color: #4084F1;
+            }
+
+            .hidden-checkbox:checked ~ .switch-toggle {
+                border: 1px solid #e31c3a;
+                left: 20px;
+            }
+
+            .switch-area,
+            .switch-toggle {
+                -webkit-transition: All 0.3s ease;
+                -moz-transition: All 0.3s ease;
+                -o-transition: All 0.3s ease;
+                transition: All 0.3s ease;
+            }
+        </style>
+    </head>
+    <body>
+    <h5>暗黑模式</h5>
+    <div class="switch-btn">
+        <input type="checkbox" class="hidden-checkbox">
+        <span class="switch-area"></span>
+        <span class="switch-toggle"></span>
+    </div>
+    <br>
+    <div>
+        <button><a href="#">修改用户名</a></button>
+        <br><br>
+        <button><a href="#">修改密码</a></button>
+        <br><br>
+    </div>
+    <div>
+        <button><a href="#">删除用户</a></button>
+        <br><br>
+    </div>
+    <div>
+        <button><a href="#">关于</a></button>
+        <br><br>
+    </div>
+    </body>
+    </html>
 {% endblock content %}

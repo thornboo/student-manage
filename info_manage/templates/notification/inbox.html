@@ -1,0 +1,32 @@
+{% extends "info_manage/base.html" %}
+{% block header %}
+    <h3>收件箱</h3>
+{% endblock header %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>inbox</title>
+        <style>
+            h3 {
+                text-align: center;
+            }
+
+            div ul {
+                line-height: 27px;
+            }
+        </style>
+    </head>
+    <body>
+    <div>
+        <ul>
+            <li><a href="#">一封邮件</a> </li>
+            <li><a href="#">一封邮件</a> </li>
+            <li><a href="#">一封邮件</a> </li>
+            <li><a href="#">一封邮件</a> </li>
+        </ul>
+    </div>
+    </body>
+    </html>
+{% endblock content %}

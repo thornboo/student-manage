@@ -52,7 +52,11 @@ urlpatterns = [
 
     # 通知管理栏
     # 1、通讯录
-    # 2、收件箱
+    path('address_book/', views.address_book, name="address_book"),
+    # 2、写邮件
+    path('outbox/', views.outbox, name="outbox"),
     # 3、发件箱
+    path('inbox/', views.inbox, name="inbox"),
     # 4、草稿箱
+    path('draft_box/', views.draft_box, name="draft_box"),
 ]

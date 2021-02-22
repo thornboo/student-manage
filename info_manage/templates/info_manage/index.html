@@ -96,10 +96,10 @@
             </div>
             <div id="collapsefive" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <a href="#">1、通讯录</a><br>
-                    <a href="#">2、收件箱</a><br>
-                    <a href="#">3、发件箱</a><br>
-                    <a href="#">4、草稿箱</a><br>
+                    <a href={% url 'info_manage:address_book' %}>1、通讯录</a><br>
+                    <a href={% url "info_manage:outbox" %}>2、写邮件</a><br>
+                    <a href={% url "info_manage:inbox" %}>3、收件箱</a><br>
+                    <a href={% url "info_manage:draft_box" %}>4、草稿箱</a><br>
                 </div>
             </div>
         </div>

@@ -1,0 +1,49 @@
+{% extends "info_manage/base.html" %}
+{% block header %}
+    <h3>写邮件</h3>
+{% endblock header %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>outbox</title>
+        <style>
+            h3 {
+                text-align: center;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            textarea {
+                width: 100%; /*自动适应父布局宽度*/
+            }
+
+            div button {
+                display: block;
+                margin: auto;
+            }
+        </style>
+        <script>
+            function submit() {
+                alert("发送成功！");
+            }
+        </script>
+    </head>
+    <body>
+    <div>
+        收件人:<input type="text" placeholder="请输入邮箱号...">
+        <br><br>
+        主题:<input type="text" placeholder="请输入主题...">
+        <br><br>
+        内容:<textarea rows="20px" cols="150px" class="topic" placeholder="请输入内容..."></textarea>
+    </div>
+    <br>
+    <div>
+        <button type="submit" onclick="submit()"><a href="#">发送</a></button><br>
+    </div>
+    </body>
+    </html>
+{% endblock content %}

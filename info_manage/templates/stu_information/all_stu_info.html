@@ -1,0 +1,34 @@
+{% extends "info_manage/base.html" %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>all_stu_info</title>
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+        <script>
+            $(document).ready(function () {
+                // 拼接跳转url中要传输的数据
+                var dataList = [];
+                var dataStr;
+                dataList.push('name');//name、password为要传递的参数
+                dataList.push('password');
+                dataStr = window.JSON.stringify(dataList);
+
+                $('#all_stu_info').on('click', function () {
+                    $('#all_stu_info').attr("href", "stu_infomation/?data=" + dataStr);
+                })
+            });
+        </script>
+    </head>
+    <body>
+    <div>
+        {% for stu in student %}
+            <ul>
+            <a id="all_stu_info" href="{% url "info_manage:stu_information" %}">{{ stu.stu_name }}</a>
+            </ul>
+        {% endfor %}
+    </div>
+    </body>
+    </html>
+{% endblock content %}
